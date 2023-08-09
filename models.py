@@ -32,7 +32,7 @@ class job_details(models.Model):
     requirements = models.CharField(max_length=100)
     location = models.CharField(max_length=50)
     enable = models.BooleanField(default=True)
-    skill_keywords = models.CharField(choice=skill_keyword,max_length=500)
+    skill_keywords = models.CharField(max_length=500)
     job_start_date=models.DatetimeField(auto_now_add=True)
     creation_date=models.DatetimeField(auto_now_add=True)
     created_by=models.IntegerField(max_length=12)
