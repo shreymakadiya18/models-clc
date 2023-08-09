@@ -13,7 +13,7 @@ class job_list(models.Model):
     
     def __str__(self) -> str:
         return self.Company_name
-    s
+
 class job_details(models.Model):
     org_id= models.IntegerField(max_length=True)
     bu_id= models.IntegerField(max_length=True)
