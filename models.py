@@ -16,6 +16,7 @@ class job_list(models.Model):
     
 
 class job_details(models.Model):
+    org_id models.IntegerField(max_length=True)
     job_id = models.AutoField(primary_key=True)
     job_post = models.CharField(max_length=50)
     job_vacancy = models.IntegerField(max_length=50)
@@ -28,7 +29,9 @@ class job_details(models.Model):
     qualification = models.CharField(max_length=100)
     requirements = models.CharField(max_length=100)
     location = models.CharField(max_length=50)
-    
+    job_start_date=models.DatetimeField(auto_now_add=True)
+    job_duration =models.CharField(max_length=100)
+    enable = models.BooleanField(default=True)
     class Meta():
         unique_together=('job_post', 'position')
     
